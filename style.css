@@ -90,11 +90,18 @@ article h2{
 article p{
     line-height: 2em;
 }
-
+article p::first-line{
+    font-size: 2em;
+}
 .images{
     text-align: center;
     margin: 80px;
     white-space: nowrap;
+}
+.images li:hover{
+    position: relative;
+    top: -4px;
+
 }
 
 .images li{
@@ -115,6 +122,10 @@ section.join{
     color: #4b4b4b;
 }
 
+section.join p::first-letter{
+    font-size: 2em;
+}
+
 .join h2{
     font-size: 36px;
 }
@@ -127,9 +138,25 @@ form input{
     border: 4px solid white
 }
 
+form input:focus{
+    border: 4px dashed #4b4b4b;
+}
+
+form input:valid{
+    border:4px dashed green
+}
 footer{
     text-align: center;
     background-color: #f63232;
     color: white;
     padding: 10px;
+}
+
+
+/* Pseudo classes */
+
+nav li a:hover{
+    text-decoration: underline;
+    
+
 }
